@@ -33,6 +33,7 @@ for phrase in total_phrases:
 
     m = Xprv.from_mnemonic(phrase)
 
+    # check first few address spaces for a known match
     for i in range(0, 5):
         addr = (m/44./0./0./0/i).address('P2PKH')
         if addr == '1C26mdyEsNpe4fpkYtuHzH4Y378wez8mxP':
